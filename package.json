@@ -2,13 +2,15 @@
   "name": "cinema-api",
   "version": "1.0.0",
   "description": "Projeto de finalização do módulo 4.",
-  "main": "app.js",
+  "main": "./src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./src/app.js"
+    
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thaissilvr/cinema-api-m4.git"
+    "url": "git+https://github.com/thaissilvr/CINEMA-API.git"
   },
   "keywords": [
     "api"
@@ -16,9 +18,9 @@
   "author": "Thais Silveira",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/thaissilvr/cinema-api-m4/issues"
+    "url": "https://github.com/thaissilvr/CINEMA-API/issues"
   },
-  "homepage": "https://github.com/thaissilvr/cinema-api-m4#readme",
+  "homepage": "https://github.com/thaissilvr/CINEMA-API#readme",
   "dependencies": {
     "express": "^4.17.1"
   },
