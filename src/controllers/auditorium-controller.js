@@ -1,8 +1,16 @@
 const Auditorium = require('../models/Auditorium')
+const AuditoriumDAO = require('../dao/AuditoriumDao')
 
-const auditorium = (app) => {
-    app.get('/auditorium', (req, res) => {
-        res.send('You are on the GET root. Welcome to our cinema! 😎')
+const auditorium = (app, bd) => {
+   const help = new AuditoriumDAO(bd)
+    app.get('/auditorium', async (req, res) => {
+        
+        try {
+            const aud = await help.list()
+            res.json(aud)
+        } catch (error) {
+            res.status(400).json(error)
+        }
     })
 
     app.post('/auditorium', (req,res) => {
