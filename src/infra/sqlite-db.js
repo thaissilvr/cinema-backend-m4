@@ -8,10 +8,10 @@ const bd = new sqlite3.Database(caminhoArq);
 const createTableAd = `CREATE TABLE IF NOT EXISTS Auditorium
 (
     "id" INTEGER PRIMARY KEY AUTOINCREMENT,
-    "room_number" tinyint,
-    "type" varchar(2),
-    "seats_av" tinyint(40),
-    "total_capacity" tinyint(40)
+    "room_number" tinyint NOT NULL,
+    "type" varchar(2) NOT NULL,
+    "seats_av" tinyint(40) NOT NULL,
+    "total_capacity" tinyint(40) NOT NULL
   );`
 
   bd.run(createTableAd, (error) => {

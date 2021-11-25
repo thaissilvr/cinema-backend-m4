@@ -14,8 +14,25 @@ const auditorium = (app, bd) => {
     })
 
     app.post('/auditorium', (req,res) => {
+        try {
         const body = req.body
-        res.send('You are on the POST root. Welcome to our cinema! 😎')
+        const addRoom = new Auditorium(body.room_number, body.type, body.seats_av, body.total_capacity)
+        help.insert(addRoom)
+            .then((resposta)=>{
+                res.json(resposta)
+                console.log(resposta)
+            })
+            .catch((erro)=>{
+                res.json(erro)
+                console.log(erro)
+            })
+        
+    } catch {
+        res.json({
+            "msg": error.message,
+            "error": true
+        })
+    }
     })
 }
 
