@@ -17,6 +17,21 @@ class AuditoriumDAO {
         })
     }
 
+    listId(id) {
+        return new Promise ((res, rej) => {
+         const sqlEmail = `SELECT * FROM Auditorium WHERE id = ?`
+         this.db.all(sqlEmail, id, (error, rows) => {
+            if(error) {
+                rej(error.message)
+            } else {
+                res(rows)
+            }
+         })
+        })
+    }
+
+
+
     insert(addRoom) {
         return new Promise ((res, rej) => {
             const sql = `INSERT INTO Auditorium (room_number, type, seats_av, total_capacity) VALUES (?, ?, ?, ?)`
@@ -34,6 +49,46 @@ class AuditoriumDAO {
             
         )}
     )}
+
+
+    deleteById(id) {  
+        return new Promise ((req, res)=>{
+            const sql = `DELETE * Auditorium WHERE id = ?`
+            this.db.run(sql, id, (error) =>{
+                if (error) {
+                    rej({
+                        "msg" : error.message,
+                        "error": true
+                    })
+             } else {
+                res({
+                    "msg": "Id deleted successfully",
+                    "error" : false
+                })
+             }
+            })
+        })
+    }
+
+    alterById(id) {
+        return new Promise ((req, res)=>{
+            const sql = `UPDATE Auditorium SET id = ?,
+            number_room = ?, type = ?, seats_av =?, total_capacity = ?`
+            this.db.run(sql, id, (error) =>{
+                if (error) {
+                    rej({
+                        "msg" : error.message,
+                        "error": true
+                    })
+             } else {
+                res({
+                    "msg": "Id updated successfully",
+                    "error" : false
+                })
+             }
+            })
+        })
+    }
 
 }
           
