@@ -52,8 +52,8 @@ class AuditoriumDAO {
 
 
     deleteById(id) {  
-        return new Promise ((req, res)=>{
-            const sql = `DELETE * Auditorium WHERE id = ?`
+        return new Promise ((res, rej)=>{
+            const sql = `DELETE FROM Auditorium WHERE id = ?`
             this.db.run(sql, id, (error) =>{
                 if (error) {
                     rej({
@@ -70,11 +70,11 @@ class AuditoriumDAO {
         })
     }
 
-    alterById(id) {
-        return new Promise ((req, res)=>{
-            const sql = `UPDATE Auditorium SET id = ?,
-            number_room = ?, type = ?, seats_av =?, total_capacity = ?`
-            this.db.run(sql, id, (error) =>{
+    alterById(id, body) {
+        return new Promise ((res, rej)=>{
+            const sql = `UPDATE Auditorium SET
+            room_number = ?, type = ?, seats_av =?, total_capacity = ? WHERE id = ?`
+            this.db.run(sql, [body.room_number, body.type, body.seats_av, body.total_capacity, id], (error) =>{
                 if (error) {
                     rej({
                         "msg" : error.message,

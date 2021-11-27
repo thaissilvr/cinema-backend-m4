@@ -26,21 +26,14 @@ const auditorium = (app, bd) => {
 
 
 
-    app.post('/auditorium', (req,res) => {
+    app.post('/auditorium', async (req,res) => {
         try {
         const body = req.body
-        const alteredRoom = new Auditorium(body.room_number, body.type, body.seats_av, body.total_capacity)
-        help.insert(addRoom)
-            .then((resposta)=>{
-                res.json(resposta)
-                console.log(resposta)
-            })
-            .catch((erro)=>{
-                res.json(erro)
-                console.log(erro)
-            })
+        const addRoom = new Auditorium(body.room_number, body.type, body.seats_av, body.total_capacity)
+        const add = await help.insert(addRoom)
+        res.json(add)     
         
-    } catch {
+        } catch (error) {
         res.json({
             "msg": error.message,
             "error": true
@@ -61,7 +54,16 @@ const auditorium = (app, bd) => {
     })
 
     app.put(('/auditorium/:id'), async (req, res) => {
-       
+       const id = req.params.id
+       const body = req.body
+
+       try {
+           const upd = await help.alterById(id, body)
+           res.json(upd)
+           
+       } catch (error) {
+        res.status(400).json(error)
+       }
 
     })
 
