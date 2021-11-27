@@ -16,5 +16,5 @@ app.use(express.json())
 //ROOT
 auditorium(app, bd)
 
-//RUNNING THE SERVER
-app.listen(port, () => console.log(`Oi, tô aqui no http://localhost:${port}!`))
+module.exports = app
+

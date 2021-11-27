@@ -2,9 +2,9 @@
   "name": "cinema-api",
   "version": "1.0.0",
   "description": "Projeto de finalização do módulo 4.",
-  "main": "./src/app.js",
+  "main": "./server/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "dev": "nodemon ./src/app.js"
   },
   "repository": {
@@ -25,6 +25,8 @@
     "sqlite3": "^5.0.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "jest": "^27.3.1",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.1.6"
   }
 }
