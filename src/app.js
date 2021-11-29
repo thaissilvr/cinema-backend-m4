@@ -1,7 +1,7 @@
 //PACKAGES
 const express = require('express');
 const app = express();
-const port = 3004;
+
 
 //CONTROLLER
 const auditorium = require('./controllers/auditorium-controller')

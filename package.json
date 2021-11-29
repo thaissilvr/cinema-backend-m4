@@ -2,10 +2,10 @@
   "name": "cinema-api",
   "version": "1.0.0",
   "description": "Projeto de finalização do módulo 4.",
-  "main": "./server/server.js",
+  "main": "./src/server/server.js",
   "scripts": {
     "test": "jest",
-    "dev": "nodemon ./src/app.js"
+    "dev": "nodemon ./src/server/server.js"
   },
   "repository": {
     "type": "git",
