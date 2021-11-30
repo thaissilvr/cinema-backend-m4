@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thaissilvr/CINEMA-API.git"
+    "url": "git+https://github.com/thaissilvr/cinema-aud-m4.git"
   },
   "keywords": [
     "api"
@@ -17,9 +17,9 @@
   "author": "Thais Silveira",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/thaissilvr/CINEMA-API/issues"
+    "url": "https://github.com/thaissilvr/cinema-aud-m4/issues"
   },
-  "homepage": "https://github.com/thaissilvr/CINEMA-API#readme",
+  "homepage": "https://github.com/thaissilvr/cinema-aud-m4#readme",
   "dependencies": {
     "express": "^4.17.1",
     "sqlite3": "^5.0.2"

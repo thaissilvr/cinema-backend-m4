@@ -8,4 +8,4 @@ describe('GET test.', () => {
             expect(res.statusCode).toBe(200)
         })
     })
-})
+});
