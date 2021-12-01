@@ -15,15 +15,16 @@
 ---
 ## API STRUCTURE
 #### This is a REST API, containing all the HTTP verbs: GET, POST, PUST and DELETE. The structure from each verb can be found below:
-
+~~~
 GET: url/auditorium
 GET: url/auditorium/:id
 POST: url/auditorium
 PUT: url/auditorium/:id
 DELETE: url/auditorium
-
+~~~
 
 ### RETURNING DATA
+~~~JSON
 {
     "id": 1,
     "room_number": 1,
@@ -46,10 +47,11 @@ DELETE: url/auditorium
     "seats_av": 25,
     "total_capacity": 40
 }
-
+~~~~
 
 ### RETURNING DATA USING AN ID
 Return id = 3
+~~~JSON
 {
     "id": 3,
     "room_number": 3,
@@ -57,16 +59,18 @@ Return id = 3
     "seats_av": 25,
     "total_capacity": 40
 }
+~~~
 
 ### DELETING DATA USING AN ID
 Deleting id = 3
-
+~~~JSON
 {
     "msg" : "Id deleted successfully",
     "error" : false
 }
+~~~
 ### CREATING NEW DATA
-
+~~~JSON
 {
     "id": 4,
     "room_number": 3,
@@ -74,9 +78,9 @@ Deleting id = 3
     "seats_av": 27,
     "total_capacity": 40
 }
-
+~~~
 ### UPDATING DATA USING AN ID
-
+~~~JSON
 {
     "id": 4,
     "room_number": 3,
@@ -84,5 +88,5 @@ Deleting id = 3
     "seats_av": 27,
     "total_capacity": 40
 }
-
+~~~
 ---
