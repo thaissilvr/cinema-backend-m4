@@ -13,7 +13,6 @@
 ## Database
 #### SQLite3 was used as a database for this project.
 ---
-<<<<<<< HEAD
 
 # Running the Server
 
@@ -34,8 +33,6 @@ Run the server
 npm run dev
 ```
 
-=======
->>>>>>> 1d5e0d6d2b162f87c9d9461d869b75f4dece42c4
 ## API STRUCTURE
 #### This is a REST API, containing all the HTTP verbs: GET, POST, PUST and DELETE. The structure from each verb can be found below:
 ~~~
@@ -70,11 +67,9 @@ DELETE: url/auditorium
     "seats_av": 25,
     "total_capacity": 40
 }
-<<<<<<< HEAD
+
 ~~~
-=======
-~~~~
->>>>>>> 1d5e0d6d2b162f87c9d9461d869b75f4dece42c4
+
 
 ### RETURNING DATA USING AN ID
 Return id = 3
@@ -116,7 +111,6 @@ Deleting id = 3
     "total_capacity": 40
 }
 ~~~
----
 
 ## Testing the API on the terminal
 ```bash
