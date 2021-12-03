@@ -22,7 +22,7 @@ git clone https://github.com/thaissilvr/cinema-aud-m4.git
 ```
 Access the project directory
 ```bash
-cd cinema-aud-api
+cd cinema-aud-m4
 ```
 Install depedencies
 ```bash
@@ -36,11 +36,11 @@ npm run dev
 ## API STRUCTURE
 #### This is a REST API, containing all the HTTP verbs: GET, POST, PUST and DELETE. The structure from each verb can be found below:
 ~~~
-GET: url/auditorium
-GET: url/auditorium/:id
-POST: url/auditorium
-PUT: url/auditorium/:id
-DELETE: url/auditorium
+GET: /auditorium
+GET: /auditorium/:id
+POST: /auditorium
+PUT: /auditorium/:id
+DELETE: /auditorium
 ~~~
 
 ### RETURNING DATA
