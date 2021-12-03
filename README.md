@@ -22,7 +22,7 @@ git clone https://github.com/thaissilvr/cinema-aud-m4.git
 ```
 Access the project directory
 ```bash
-cd cinema-aud-api
+cd cinema-aud-m4
 ```
 Install depedencies
 ```bash
