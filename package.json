@@ -4,6 +4,7 @@
   "description": "Projeto de finalização do módulo 4.",
   "main": "./src/server/server.js",
   "scripts": {
+    "start": "node ./src/server/server.js",
     "test": "jest",
     "dev": "nodemon ./src/server/server.js"
   },
