@@ -2,6 +2,10 @@
 
 #### Final project for Resilia Educação's fourth module. This API consists on auditoriums (rooms) in a movie theater and details from them. 
 
+#### HEROKU: https://cinema-aud-m4.herokuapp.com/
+
+** Please, ignore GitHub Pages... It wans't supposed to be on, oops! x_x
+
 ---
 # General Info
 #### The project was build using Node.js and the Express framework.
