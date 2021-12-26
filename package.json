@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/thaissilvr/cinema-aud-m4#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "sqlite3": "^5.0.2"
   },
@@ -30,5 +31,7 @@
     "nodemon": "^2.0.15",
     "supertest": "^6.1.6"
   },
-  "engines": {"node": "16.*"}
+  "engines": {
+    "node": "16.*"
+  }
 }
