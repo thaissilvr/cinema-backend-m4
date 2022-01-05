@@ -38,7 +38,7 @@ npm run dev
 ```
 
 ## API STRUCTURE
-#### This is a REST API, containing all the HTTP verbs: GET, POST, PUST and DELETE. The structure from each verb can be found below:
+#### This is a REST API, containing all the HTTP verbs: GET, POST, PUT and DELETE. The structure from each verb can be found below:
 ~~~
 GET: /auditorium
 GET: /auditorium/:id
